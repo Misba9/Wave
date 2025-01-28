@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="style/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <script src="https://kit.fontawesome.com/11ebebdeee.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Left Banner Section -->
+        <div class="banner">
+            <img src="images/singup-main.png" alt="Happy Knowledge Day" class="banner-img">
+            <div class="banner-content">
+                <a href="signin.html" class="sign-in-btn">Sign In</a>
+                <a href="index.html" class="back-btn"><i class="fa-solid fa-house"></i> Back to Main Site</a>
+            </div>
+        </div>
+        <!-- Right Form Section -->
+        <div class="form-container">
+            <div class="header">
+                <img src="images/logo.png" alt="Logo" class="logo">
+                <h2>Wave</h2>
+            </div>
+            <div class="sub-header">
+                <h3>Sign Up</h3>
+                <p>Welcome! Unlock a world of curious knowledge and more. Start your journey to explore, learn, and grow
+                    globally.</p>
+            </div>
+            <form>
+                <div class="sidebyside">
+                    <div class="upload-container">
+                        <input type="file" accept="image/*">
+                        <img src="images/upload.png" alt="Upload Icon">
+                    </div>
+                    <div class="form-group">
+                        <div class="form-group-indiv">
+                            <label for="name">Name:</label>
+                            <i class="fa-solid fa-user f-icon"></i>
+                            <input type="text" placeholder="Enter your mail or user name" required>
+                        </div>
+                        <div class="form-group-indiv">
+                            <label for="surname">SurName:</label>
+                            <i class="fa-solid fa-user f-icon"></i>
+                            <input type="text" placeholder="Enter your surname" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group-indiv">
+                        <label for="Nationality">Nationality:</label>
+                        <i class="fa-solid fa-flag f-icon"></i>
+                        <select>
+                            <option>Indian</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group-indiv">
+                        <label for="religion">Religion:</label>
+                        <i class="fa-solid fa-church f-icon"></i>
+                        <select>
+                            <option>Hindu</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-group-indiv">
+                        <label for="gender">Gender:</label>
+                        <i class="fa-solid fa-venus-mars f-icon"></i>
+                        <select>
+                            <option>male</option>
+                            <option>female</option>
+                            <option>Other</option>
+                        </select>
+
+                    </div>
+                    <div class="form-group-indiv">
+                        <label for="dob">Date of Birth:</label>
+                        <i class="fa-solid fa-calendar f-icon"></i>
+                        <input type="date" id="dob">
+                    </div>
+                </div>
+                <div class="form-group-indiv">
+                    <label for="password">password:</label>
+                    <i class="fa-solid fa-lock f-icon"></i>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+                <div class="form-group-indiv">
+                    <label for="Confirm">Confirm:</label>
+                    <i class="fa-solid fa-lock f-icon"></i>
+                    <input type="password" placeholder="Confirm password" required>
+                </div>
+                <div class="form-group-indiv">
+                    <label for="email">email:</label>
+                    <i class="fa-solid fa-envelope f-icon"></i>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group-indiv">
+                    <label for="number">Mobile Number:</label>
+                    <i class="fa-solid fa-phone f-icon"></i>
+                    <input type="number" placeholder="Enter your contact number" required>
+                </div>
+                <div class="form-group-indiv">
+                    <label for="address">Address:</label>
+                    <i class="fa-solid fa-map-marker f-icon"></i>
+                    <input type="text" placeholder="Enter your address">
+                </div>
+                <div class="form-group-indiv">
+                    <label for="code">Zip Code:</label>
+                    <i class="fa-solid fa-map-marker f-icon"></i>
+                    <input type="text" placeholder="Enter your zip code">
+                </div>
+                <div class="form-group">
+                    <div class="form-group-indiv">
+                        <label for="aadhaar-upload">Aadhaar/ID:</label>
+                        <i class="fa-solid fa-id-card f-icon"></i>
+                        <input type="file" id="aadhaar-upload">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" required> I accept all terms and conditions
+                </div>
+                <button type="submit" class="submit-btn">Submit</button>
+                <p>Already have an account? <a href="signin.html">Login Here</a></p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

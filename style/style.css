@@ -1,0 +1,934 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar end here */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 24px;
+    margin-right: 10px;
+}
+
+.navbar .menu {
+    display: flex;
+    gap: 15px;
+}
+
+.navbar .menu a {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 10px;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+}
+
+.navbar .menu a.active {
+    background-color: #ffe4e4;
+    color: #d9534f;
+}
+
+.navbar .menu a:hover {
+    background-color: #e6e6e6;
+}
+
+.navbar .search {
+    display: flex;
+    align-items: center;
+    /* gap:   10px; */
+}
+
+.navbar .search input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+}
+
+.navbar .icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar .profile {
+    display: flex;
+    align-items: center;
+    /* gap: 10px; */
+}
+
+.navbar .profile img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+
+.icon {
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 8px;
+    border: 1px solid;
+    transition: color 0.3s;
+}
+
+.icon:hover {
+    color: #555;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+
+.search input {
+    width: 100%;
+    padding: 19px 9px 79px 19px;
+    /* Space for the icon */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search input::placeholder {
+    /* text-align: center; */
+    padding-left: 28px;
+}
+
+.search .search-icon {
+    left: 10px;
+    color: #aaa;
+    font-size: 18px;
+    pointer-events: none;
+    /* Ensures the icon doesn't block input clicks */
+}
+
+.search button {
+    position: absolute;
+    top: 50%;
+    right: 2px;
+    transform: translateY(-50%);
+}
+
+.search span {
+    position: absolute;
+    top: 50%;
+    left: 2px;
+    transform: translateY(-50%);
+}
+
+.profile-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    padding: 6px;
+    border-radius: 22px;
+    border: 1px solid #333;
+}
+
+.profile-pic {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+
+
+.profile {
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+/* .profile-name {
+    position: relative;
+    text-overflow: ellipsis;
+    width: 92px;
+    margin: 0;
+    display: inline;
+    padding-right: 20px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+
+.profile-pic {
+    background: #f5f5f5;
+    position: absolute;
+    top: 50%;
+    right: -27px;
+    top: 50%;
+    right: 0;
+    /* Position at the right corner of the span */
+    transform: translateY(-50%);
+    width: 20px;
+    /* Adjust size as needed */
+    height: 20px;
+    border-radius: 50%;
+    /* Make it circular */
+}
+
+/* Container for profile dropdown */
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+}
+
+/* Profile section */
+.profile {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+.profile:hover {
+    background-color: #f0f0f0;
+}
+
+.profile-name {
+    margin-right: 10px;
+    font-size: 16px;
+    white-space: nowrap;
+    /* overflow: hidden; */
+    text-overflow: ellipsis;
+}
+
+.profile-pic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 250px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    margin-top: 0rem;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.dropdown-menu li {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.dropdown-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+}
+
+.dropdown-menu hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 5px 0;
+}
+
+/* Show dropdown on hover */
+.profile-dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Example icons (use a library like Font Awesome for real icons) */
+.icon-profile::before {
+    content: "👤";
+}
+
+.icon-swap::before {
+    content: "🔄";
+}
+
+.icon-signout::before {
+    content: "🚪";
+}
+
+.icon-plans::before {
+    content: "📋";
+}
+
+.icon-restrict::before {
+    content: "🔒";
+}
+
+.icon-terms::before {
+    content: "📜";
+}
+
+.icon-location::before {
+    content: "🌍";
+}
+
+.icon-settings::before {
+    content: "⚙️";
+}
+
+/* Navbar end here */
+
+/* body start here */
+/* Container for categories */
+.categories {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 0px 46px;
+}
+
+/* Category buttons */
+.category {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding: 8px 12px;
+
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.category i {
+    font-size: 16px;
+    display: inline-block;
+}
+
+.category:hover {
+    background-color: #eee;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category.active {
+    background-color: #d22;
+    color: #fff;
+    border: 1px solid #d22;
+}
+
+.category.active:hover {
+    background-color: #b00;
+}
+
+ /* Icons (replace with an actual icon library like Font Awesome) */
+.icon-all::before {
+   content: "👥";
+}
+.icon-trending::before {
+    content: "↗";
+}
+
+.icon-sports::before {
+    content: "⚽";
+}
+
+.icon-movies::before {
+    content: "🎬";
+}
+
+.icon-food::before {
+    content: "🍔";
+}
+
+.icon-wildlife::before {
+    content: "🐾";
+}
+
+.icon-music::before {
+    content: "🎵";
+}
+
+/* banner code */
+.banner {
+    margin: 20px 25px;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.banner img {
+    max-height: 150px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+/* recomend videos */
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.videos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+    text-align: left;
+    justify-content: space-between; 
+    /* padding: 20px; */
+}
+
+.video-card {
+    /* background: #fff; */
+    border-radius: 10px;
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    position: relative;
+    flex: 1 1 calc(25% - 20px); /* Flexible width, 4 cards per row */
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.video-card:hover {
+    transform: translateY(-5px);
+}
+
+.video-thumbnail {
+    position: relative;
+    margin-top: 32px;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    display: block;
+    border-radius: 12px;
+    
+
+}
+
+.video-meta {
+    position: absolute;
+    /* top: 10px; */
+    left: -7px;
+    right: 0px;
+    font-size: 0.875rem;
+    color: black;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.video-meta img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.badge {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: rgba(255, 0, 0, 0.8);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 5px 20px;
+    margin-top: -5px;
+    border-radius: 20px;
+}
+
+.video-meta-down {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 0.875rem;
+    color: #fff;
+    /* background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3)); */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(20, 20, 20, 0));
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video-title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.badge-down {
+    margin-left: 1px;
+    background-color: rgba(49, 49, 49, 0.8);
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+    align-self: flex-end;
+}
+
+.title-sub-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-sub-head .sub-head-right {
+    margin-left: auto;
+    text-align: right;
+}
+
+.video-meta-down small {
+    font-size: 0.75rem;
+    color: #ddd;
+}
+
+.video-info {
+    padding: 15px;
+}
+
+.video-meta {
+    font-size: 0.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    z-index: 99;
+}
+
+.video-meta span {
+    display: flex;
+    align-items: center;
+}
+
+.video-meta img {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.badge {
+    background-color: #e74c3c;
+    color: #fff;
+    font-size: 0.75rem;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+@media (max-width: 1024px) {
+    .video-card {
+        flex: 1 1 calc(33.33% - 20px); /* 3 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .video-card {
+        flex: 1 1 calc(50% - 20px); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .video-card {
+        flex: 1 1 100%; /* 1 card per row */
+    }
+}
+
+
+
+
+/* shorts */
+.shorts-container {
+    padding: 20px;
+  }
+  .shorts-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  .shorts-grid {
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+  }
+  .short-card {
+    width: 130px;
+    height: 195px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    cursor: pointer;
+  }
+  .short-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  .short-card .short-title {
+    font-size: 12px;
+    /* padding: 10px; */
+  }
+  .view-more {
+    margin-top: 15px;
+    text-align: right;
+  }
+  .view-more a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #007bff;
+  }
+  
+.views {
+    position: absolute;
+    top: 10px; /* Space from the top */
+    right: 10px; /* Space from the right */
+    /* background: rgba(0, 0, 0, 0.7); Semi-transparent background */
+    color: black;
+    padding: 5px 10px; /* Add padding for better readability */
+    border-radius: 8px; /* Rounded corners */
+    font-size: 14px; /* Adjust font size */
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Space between the icon and text */
+}
+
+.views i {
+    font-size: 16px; /* Adjust icon size */
+}
+
+.short-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: #f9f9f9; /* Optional background for better visibility */
+}
+
+.short-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fully fits the card */
+}
+
+.shorts-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* background: rgba(0, 0, 0, 0.6);  */
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(19, 19, 19, 0.082));
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.shorts-main-head {
+    display: flex;
+    justify-content: space-between; /* Align title to the left and icon to the right */
+    align-items: center;
+}
+
+.short-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0;
+}
+
+.more-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.short-user {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.short-user img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+/* shorts */
+
+/* interests */
+/* Container Styles */
+.interests {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    width: 100%;
+}
+
+.interests h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Grid Container for Cards */
+.interests-container {
+        display: flex;
+        gap: 5px;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: flex-end;
+    }
+
+/* Individual Card Styles */
+.interest-card {
+    width: 180px;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    background: url('../images/movie-bg.png') center/cover no-repeat;
+    border-radius: 12px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.interest-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Icon Styles */
+.interest-card .icon img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+/* Text Styling */
+.interest-card p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+.icon-img{
+    font-size: 20px;
+    padding: 1px !important; 
+    border: none;
+    float: left;
+    transition: color 0.3s;
+}
+
+/* interests */
+
+/* side ads */
+.body-left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.dropdown-menu {
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu li {
+    padding: 0.8rem;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dropdown-menu li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f0f0f0;
+}
+
+.business-banner {
+    width: 100%;
+    margin: 50px 0;
+    height: 45vh;
+    max-width: 300px;
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.business-banner img {
+    /* width: 100%; */
+    height: 100%;
+    display: block;
+}
+
+.banner-content {
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.banner-content h2 {
+    font-size: 16px;
+    margin: 0 0 0.5rem;
+}
+
+.banner-content p {
+    font-size: 12px;
+    margin: 0.2rem 0;
+}
+
+.diwali-card {
+    width: 100%;
+    max-width: 300px;
+    height: 45vh;
+    margin: 50px 0;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+.diwali-card img {
+    /* width: 100%; */
+    height: 100%;
+    display: block;
+    background-color: #f9f9f9;
+}
+
+.card-content {
+    padding: 1rem;
+    color: #333;
+}
+
+.card-content h2 {
+    font-size: 18px;
+    color: #ff6b00;
+    margin-bottom: 0.5rem;
+}
+
+.card-content p {
+    font-size: 14px;
+    margin: 0.5rem 0;
+}
+
+.card-content strong {
+    color: #007bff;
+}
+/* Full-page container */
+.full-page {
+display: flex;
+/* width: 100%; */
+/* height: 100vh; Full viewport height */
+/* overflow: hidden; Prevents scrolling */
+}
+
+/* Left side */
+.body-left {
+/* flex: 1; Takes up 50% of the width by default */
+/* background-color: #f8f9fa; Light gray background */
+display: flex;
+flex-direction: column;
+/* justify-content: center; */
+/* align-items: center; */
+/* padding: 2rem; */
+/* text-align: center; */
+}
+
+/* Right side */
+.body-right {
+/* flex: 1; Takes up 50% of the width by default */
+/* background-color: #007bff; Blue background */
+/* color: white; */
+display: flex;
+flex-direction: column;
+/* justify-content: center;
+align-items: center;
+padding: 2rem;
+text-align: center; */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+.full-page {
+flex-direction: row; 
+}
+
+.body-left, .body-left {
+height: 50vh; /* Each child takes up half the viewport height */
+flex: unset;
+}
+}
+
+/* side ads */
