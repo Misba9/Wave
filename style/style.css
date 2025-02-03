@@ -97,7 +97,7 @@ body {
     position: fixed;
     left: -250px;
     top: 0;
-    width: 150px;
+    width: 210px;
     height: 100%;
     background: #ffffff;
     transition: left 0.3s ease;
@@ -163,6 +163,7 @@ body {
     border: none;
     color: #222;
     z-index: 1000;
+    margin-right: 22px;
 }
 
 .hamburger i {
@@ -172,6 +173,7 @@ body {
 /* Sidebar Active - Change Icon */
 .hamburger.active i {
     color: rgb(0, 0, 0);
+    margin-right: 22px;
     transform: rotate(180deg);
     position: fixed;
     top: 22px;
@@ -1258,6 +1260,24 @@ text-align: center; */
 
     .shorts-container {
         max-width: 413px;
+    }
+    .sidebar {
+        width: 170px;
+    }
+    .banner {
+         margin: 2px;;
+    }
+}
+@media (max-width: 455px) {
+    .shorts-container {
+        max-width: 383px;
+    }
+    .navbar .menu-icons {
+        gap: 8px;
+    }
+    .menu-icons a {
+        padding: 8px;
+        font-size: 22px;
     }
 }
 @media (max-width: 375px) {
