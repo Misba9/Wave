@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Channel</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <style>
+        /* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* News Card */
+.news-container {
+    max-width: 850px;
+    width: 100%;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.news-card {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+/* Left: Thumbnail */
+.news-thumbnail {
+    position: relative;
+}
+
+.news-thumbnail img {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.overlay-btn {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Right: Content */
+.news-content {
+    flex: 1;
+}
+
+/* Header */
+.news-header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.meta-info {
+    font-size: 14px;
+    color: gray;
+}
+
+.follow-btn {
+    background: black;
+    color: white;
+    padding: 2px 5px;
+    font-size: 12px;
+    border-radius: 4px;
+    margin-left: 5px;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+.stats i {
+    margin-right: 5px;
+}
+
+.likes {
+    color: red;
+}
+
+/* Buttons */
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* News Text */
+.news-text {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .news-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .stats {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+}
+
+    </style>
+    <div class="channel-form-container">
+        <div class="header">
+            <h2>Create New Channel</h2>
+            <button class="close-btn">&times;</button>
+        </div>
+        <div class="banner">
+            <img src="banner-image.jpg" alt="Ad Maker Banner">
+        </div>
+        <div class="profile-section">
+            <img src="profile-image.jpg" alt="Profile Picture" class="profile-pic">
+            <input type="file" id="upload-profile" hidden>
+            <label for="upload-profile" class="upload-btn"><i class="fas fa-camera"></i></label>
+        </div>
+        <form>
+            <label>Channel Title:</label>
+            <input type="text" placeholder="Enter channel title">
+            
+            <label>Channel Description:</label>
+            <textarea placeholder="Enter channel description" maxlength="500"></textarea>
+            
+            <div class="form-row">
+                <label>Email:</label>
+                <input type="email" placeholder="Email address">
+            </div>
+            
+            <div class="form-row">
+                <label>Contact Number:</label>
+                <input type="tel" placeholder="Enter number">
+            </div>
+            
+            <div class="form-row">
+                <label>Address:</label>
+                <input type="text" placeholder="Enter address">
+            </div>
+            
+            <div class="form-row">
+                <label>Want to be Premium in future:</label>
+                <select>
+                    <option>Yes, I want to be premium</option>
+                    <option>No</option>
+                </select>
+            </div>
+            
+            <label>Visible to:</label>
+            <div class="visibility-options">
+                <input type="radio" name="visibility" checked> Public (Searchable & viewable by Anyone)
+                <input type="radio" name="visibility"> Followers Only
+                <input type="radio" name="visibility"> Private
+            </div>
+            
+            <div class="social-links">
+                <label>Web Site:</label>
+                <input type="url" placeholder="Enter link">
+                
+                <label>Facebook:</label>
+                <input type="url" placeholder="Enter link">
+                
+                <label>Instagram:</label>
+                <input type="url" placeholder="Enter link">
+                
+                <label>Twitter:</label>
+                <input type="url" placeholder="Enter link">
+                
+                <label>LinkedIn:</label>
+                <input type="url" placeholder="Enter link">
+                
+                <label>WhatsApp:</label>
+                <input type="url" placeholder="Enter link">
+                
+                <label>Other Links:</label>
+                <input type="url" placeholder="Enter link">
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -155,234 +155,340 @@
             </div>
         </aside>
         <main class="content">
-            <div class="video-container">
-                <!-- <video src="your-video.mp4"></video> -->
-                <!-- <img src="images/video-main.png" alt=""> -->
-                <div class="full-progress">
-                    <span class="badge-time-left">00:52</span>
-                    <div class="progress">
-                        <div class="progress-filled"></div>
-                    </div>
-                    <span class="badge-full-time">03:52</span>
-                </div>
-                <div class="controls">
-                    <span class="controls-btn">⏪</span>
-                    <span class="controls-btn">▶</span>
-                    <span class="controls-btn">⏩</span>
-                    <span class="controls-btn-right">
-                        <span class="controls-btn">🔊</span>
-                        <span class="controls-btn">⚙</span>
-                        <span class="controls-btn">⏹</span>
-                        <span class="controls-btn">⛶</span>
-                    </span>
-                </div>
-            </div>
-            <!-- <h2>Official Trailer from Telugu Movie 'Vikramarkudu'</h2>
-            <p>Starring: Nandamuri Balakrishna</p>
-            <div class="channel-info">
-                <img src="images/user-02.png" alt="Channel Logo">
-                <span>Official Channel</span>
-                <button>Subscribe</button>
-            </div>
-            <p>Description of the video...</p> -->
             <style>
+                /* News Card */
+                .news-container {
+                    max-width: 850px;
+                    width: 100%;
+                    /* background: white; */
+                    border-radius: 10px;
+                    margin-bottom: 12px;
+                    /* box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); */
+                    padding: 20px;
+                }
 
+                .news-card {
+                    display: flex;
+                    gap: 20px;
+                    align-items: flex-start;
+                }
+
+                /* Left: Thumbnail */
+                .news-thumbnail {
+                    position: relative;
+                }
+
+                .news-thumbnail img {
+                    width: 180px;
+                    height: 180px;
+                    border-radius: 10px;
+                    object-fit: cover;
+                }
+
+                .overlay-btn {
+                    position: absolute;
+                    bottom: 10px;
+                    right: 10px;
+                    background: rgba(0, 0, 0, 0.6);
+                    color: white;
+                    border: none;
+                    padding: 8px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+
+                /* Right: Content */
+                .news-content {
+                    flex: 1;
+                }
+
+                /* Header */
+                .news-header {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                }
+
+                .profile-pic-content {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                }
+
+                .meta-info {
+                    font-size: 14px;
+                    color: gray;
+                }
+
+                .follow-btn {
+                    background: black;
+                    color: white;
+                    padding: 2px 5px;
+                    font-size: 12px;
+                    border-radius: 4px;
+                    margin-left: 5px;
+                }
+
+                .actions {
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    /* margin-top: 10px; */
+                }
+
+                .button-act {
+                    float: right;
+                    padding: 8px 12px;
+                    background: #ddd;
+                    border-radius: 15px;
+                    cursor: pointer;
+                    color: black;
+
+                }
+
+                .button-act-dislike {
+                    border-left: 1px solid black;
+                    padding-left: 5px;
+                }
+
+                /* Buttons */
+                .action-btn {
+                    background: none;
+                    border: none;
+                    cursor: pointer;
+                    font-size: 14px;
+                }
+
+                /* News Text */
+                .news-text {
+                    margin-top: 10px;
+                    font-size: 14px;
+                    line-height: 1.5;
+                    color: #333;
+                }
+
+                /* Responsive */
+                @media (max-width: 600px) {
+                    .news-card {
+                        flex-direction: column;
+                        align-items: center;
+                        text-align: center;
+                    }
+
+                    .actions {
+                        flex-wrap: wrap;
+                    }
+
+                }
             </style>
-            <div class="video-container-dis">
-                <div class="video-header">
-                    <img src="images/user-02.png" alt="Profile Picture">
-                    <div>
-                        <h2>Official Trailer from Telugu movie 'Akhanda' starring Nandamuri Balakrishna</h2>
-                        <h4>Couple Fitness Goals</h4>
+            <div class="news-container">
+                <div class="news-card">
+                    <!-- Left Section: Thumbnail -->
+                    <div class="news-thumbnail">
+                        <img src="images/video-thamnail-03.png" alt="Thumbnail">
+                        <button class="overlay-btn"><i class="fas fa-save"></i></button>
                     </div>
-                </div>
-                <div class="actions">
-                    <p>1.1M Views • 5 days ago</p>
-                    <span class="button-act">
-                        <i class="fa-regular fa-thumbs-up"></i> 1.3K
-                         <i class="fa-solid fa-thumbs-down button-act-dislike"></i>
-                    </span>
-                    <span class="button-act">Download 
-                        <i class="fa-solid fa-download"></i> 
-                    </span>
-                    <span class="button-act">Share 
-                        <i class="fa-solid fa-share-nodes"></i> 
-                    </span>
-                    <span class="button-act"> 
-                        <i class="fa-solid fa-ellipsis"></i>
-                    </span>
-                </div>
-                <p>About Video</p>
-                <p>Player video player is an all-in-one video playback tool...<a href="">More details</a></p>
 
-                <div class="dis-sidebar">
-                    <div class="dis-sidebar-item">
-                        <h3>Counter Video of</h3>
-                        <img src="images/video-meta.png" alt="">
-                        <div class="video-meta-dis">
-                            <p><strong>Daily health and wellness practices </strong></p>
-                            <p>Jayant Channel</p>
-                            <p>1.1M Views • 20 days ago</p>
+                    <!-- Right Section: Details -->
+                    <div class="news-content">
+                        <!-- Header: Profile + Title -->
+                        <div class="news-header">
+                            <img class="profile-pic-content" src="images/user.png" alt="Profile">
+                            <div>
+                                <h4>Official Trailer from Telugu movie 'Akhanda' starring Nandamuri Balakrishna</h4>
+                                <p class="meta-info">Couple Fitness Goals <span class="follow-btn">⚫ Follow</span></p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="dis-sidebar-item">
-                        <h3>Summary of Video</h3>
-                        <p>Game Changer is an upcoming Indian Telugu-language Political action thriller film directed
-                            by S. Shankar in his Telugu directorial debut, from a story written by Karthik Subbaraj. It
-                            is produced by Sri Venkateswara Creations. The film stars Ram Charan in a dual role,
-                            alongside Kiara Advani, Anjali, Samuthirakani, S. J. Suryah, Srikanth, Prakash
-                            Raj and Sunil...more</p>
-                    </div>
-                </div>
-            </div>
-            <style>
 
-            </style>
-            <div class="nav-head-switch">
-                <button class="active">Counter</button>
-                <button class="">Comments</button>
-            </div>
+                        <!-- Stats & Buttons -->
+                     
+                            <div class="actions">
+                                <span><i class="fas fa-eye"></i> 12L Views</span>
+                                <span><i class="fas fa-calendar-alt"></i> 5 days ago</span>
+                                <span class="button-act">
+                                    <i class="fa-regular fa-thumbs-up"></i> 1.3K
+                                    <i class="fa-solid fa-thumbs-down button-act-dislike"></i>
+                                </span>
+                                <span class="button-act">Download
+                                    <i class="fa-solid fa-download"></i>
+                                </span>
+                                <span class="button-act">Share
+                                    <i class="fa-solid fa-share-nodes"></i>
+                                </span>
+                                <span class="button-act">
+                                    <i class="fa-solid fa-ellipsis"></i>
+                                </span>
+                            </div>
 
-            <div class="header">
-                <div class="profile">
-                    <img src="images/user-02.png" alt="Profile Picture">
-                    <div class="info">
-                        <div>Jennifer Louis</div>
-                        <div class="info-down-clip"> <i class="fa-solid fa-paperclip"></i> Attach Counter</div>
+                            <!-- Description -->
+                            <p class="news-text">
+                                A man of the masses, firm in his political convictions. On October 13, 1999, he took
+                                charge as Prime Minister of India for the second consecutive term at the head of a new
+                                coalition government, the National Democratic Alliance...
+                            </p>
+                        </div>
                     </div>
+                    <p class="news-text">
+                        A man of the masses, firm in his political convictions. On October 13, 1999, he took
+                        charge as Prime Minister of India for the second consecutive term at the head of a new
+                        coalition government, the National Democratic AllianceA man of the masses, firm in his political
+                        convictions. On October 13, 1999, he took
+                        charge as Prime Minister of India for the second consecutive term at the head of a new
+                        coalition government, the National Democratic AllianceA man of the masses, firm in his political
+                        convictions. On October 13, 1999, he took
+                        charge as Prime Minister of India for the second consecutive term at the head of a new
+                        coalition government, the National Democratic AllianceA man of the masses, firm in his political
+                        convictions. On October 13, 1999, he took
+                        charge as Prime Minister of India for the second consecutive term at the head of a new
+                        coalition government, the National Democratic Alliance ...
+                    </p>
                 </div>
-            </div>
 
-            <div class="video-container-grid">
-                <div class="video-card">
-                    <div class="video-meta">
-                        <span>
-                            <img src="images/user.png" alt="User Avatar">
-                            <span>Sam Lee</span>
-                        </span>
-                        <!-- <span class="badge">Folow</span> -->
-                    </div>
-                    <div class="video-thumbnail">
-                        <img src="images/video-s-thumbnail-4.png" alt="Video Thumbnail">
-                    </div>
-                    <div class="video-meta-down">
-                        <div class="title-head">
-                            <div class="video-title">Epic Music Video</div>
-                            <span class="badge-down">03:52</span>
-                            <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
-                        </div>
-                        <div class="title-sub-head">
-                            <small>5M views</small>
-                            <small class="sub-head-right"><small>120 .</small>120k likes</small>
+                <div class="nav-head-switch">
+                    <button class="active">Counter</button>
+                    <button class="">Comments</button>
+                </div>
+
+                <div class="header">
+                    <div class="profile">
+                        <img src="images/user-02.png" alt="Profile Picture">
+                        <div class="info">
+                            <div>Jennifer Louis</div>
+                            <div class="info-down-clip"> <i class="fa-solid fa-paperclip"></i> Attach Counter</div>
                         </div>
                     </div>
                 </div>
-                <div class="video-card">
-                    <div class="video-meta">
-                        <span><img src="images/user.png" alt="User Avatar"> <span>Sam
-                                Lee</span></span>
-                        <!-- <span class="badge">Folow</span> -->
-                    </div>
-                    <div class="video-thumbnail">
-                        <img src="images/video-s-thumbnail-4.png" alt="Video Thumbnail">
-                    </div>
-                    <div class="video-meta-down">
-                        <div class="title-head">
-                            <div class="video-title">Epic Music Video</div>
-                            <span class="badge-down">03:52</span>
-                            <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+
+                <div class="video-container-grid">
+                    <div class="video-card">
+                        <div class="video-meta">
+                            <span>
+                                <img src="images/user.png" alt="User Avatar">
+                                <span>Sam Lee</span>
+                            </span>
+                            <!-- <span class="badge">Folow</span> -->
                         </div>
-                        <div class="title-sub-head">
-                            <small>5M views</small>
-                            <small class="sub-head-right"><small>120 .</small>120k likes</small>
+                        <div class="video-thumbnail">
+                            <img src="images/video-s-thumbnail-4.png" alt="Video Thumbnail">
                         </div>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <div class="video-meta">
-                        <span><img src="images/user.png" alt="User Avatar"> <span>Sam
-                                Lee</span></span>
-                        <!-- <span class="badge">Folow</span> -->
-                    </div>
-                    <div class="video-thumbnail">
-                        <img src="images/video-s-thumbnail-4.png" alt="Video Thumbnail">
-                    </div>
-                    <div class="video-meta-down">
-                        <div class="title-head">
-                            <div class="video-title">Epic Music Video</div>
-                            <span class="badge-down">03:52</span>
-                            <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
-                        </div>
-                        <div class="title-sub-head">
-                            <small>5M views</small>
-                            <small class="sub-head-right"><small>120 .</small>120k likes</small>
+                        <div class="video-meta-down">
+                            <div class="title-head">
+                                <div class="video-title">Epic Music Video</div>
+                                <span class="badge-down">03:52</span>
+                                <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            </div>
+                            <div class="title-sub-head">
+                                <small>5M views</small>
+                                <small class="sub-head-right"><small>120 .</small>120k likes</small>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="video-card">
-                    <div class="video-meta">
-                        <span><img src="images/user.png" alt="User Avatar"> <span>Sam
-                                Lee</span></span>
-                        <!-- <span class="badge">Folow</span> -->
-                    </div>
-                    <div class="video-thumbnail">
-                        <img src="images/video-s-thumbnail-4.png" alt="Video Thumbnail">
-                    </div>
-                    <div class="video-meta-down">
-                        <div class="title-head">
-                            <div class="video-title">Epic Music Video</div>
-                            <span class="badge-down">03:52</span>
-                            <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                    <div class="video-card">
+                        <div class="video-meta">
+                            <span><img src="images/user.png" alt="User Avatar"> <span>Sam
+                                    Lee</span></span>
+                            <!-- <span class="badge">Folow</span> -->
                         </div>
-                        <div class="title-sub-head">
-                            <small>5M views</small>
-                            <small class="sub-head-right"><small>120 .</small>120k likes</small>
+                        <div class="video-thumbnail">
+                            <img src="images/video-s-thumbnail-4.png" alt="Video Thumbnail">
                         </div>
-                    </div>
-                </div>
-                <div class="video-card">
-                    <div class="video-meta">
-                        <span><img src="images/user.png" alt="User Avatar"> <span>Sam
-                                Lee</span></span>
-                        <!-- <span class="badge">Folow</span> -->
-                    </div>
-                    <div class="video-thumbnail">
-                        <img src="images/video-s-thumbnail-4.png" alt="Video Thumbnail">
-                    </div>
-                    <div class="video-meta-down">
-                        <div class="title-head">
-                            <div class="video-title">Epic Music Video</div>
-                            <span class="badge-down">03:52</span>
-                            <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
-                        </div>
-                        <div class="title-sub-head">
-                            <small>5M views</small>
-                            <small class="sub-head-right"><small>120 .</small>120k likes</small>
+                        <div class="video-meta-down">
+                            <div class="title-head">
+                                <div class="video-title">Epic Music Video</div>
+                                <span class="badge-down">03:52</span>
+                                <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            </div>
+                            <div class="title-sub-head">
+                                <small>5M views</small>
+                                <small class="sub-head-right"><small>120 .</small>120k likes</small>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="video-card">
-                    <div class="video-meta">
-                        <span><img src="images/user.png" alt="User Avatar"> <span>Sam
-                                Lee</span></span>
-                        <!-- <span class="badge">Folow</span> -->
-                    </div>
-                    <div class="video-thumbnail">
-                        <img src="images/video-s-thumbnail-4.png" alt="Video Thumbnail">
-                    </div>
-                    <div class="video-meta-down">
-                        <div class="title-head">
-                            <div class="video-title">Epic Music Video</div>
-                            <span class="badge-down">03:52</span>
-                            <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                    <div class="video-card">
+                        <div class="video-meta">
+                            <span><img src="images/user.png" alt="User Avatar"> <span>Sam
+                                    Lee</span></span>
+                            <!-- <span class="badge">Folow</span> -->
                         </div>
-                        <div class="title-sub-head">
-                            <small>5M views</small>
-                            <small class="sub-head-right"><small>120 .</small>120k likes</small>
+                        <div class="video-thumbnail">
+                            <img src="images/video-s-thumbnail-4.png" alt="Video Thumbnail">
+                        </div>
+                        <div class="video-meta-down">
+                            <div class="title-head">
+                                <div class="video-title">Epic Music Video</div>
+                                <span class="badge-down">03:52</span>
+                                <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            </div>
+                            <div class="title-sub-head">
+                                <small>5M views</small>
+                                <small class="sub-head-right"><small>120 .</small>120k likes</small>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div> 1
+                    <div class="video-card">
+                        <div class="video-meta">
+                            <span><img src="images/user.png" alt="User Avatar"> <span>Sam
+                                    Lee</span></span>
+                            <!-- <span class="badge">Folow</span> -->
+                        </div>
+                        <div class="video-thumbnail">
+                            <img src="images/video-s-thumbnail-4.png" alt="Video Thumbnail">
+                        </div>
+                        <div class="video-meta-down">
+                            <div class="title-head">
+                                <div class="video-title">Epic Music Video</div>
+                                <span class="badge-down">03:52</span>
+                                <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            </div>
+                            <div class="title-sub-head">
+                                <small>5M views</small>
+                                <small class="sub-head-right"><small>120 .</small>120k likes</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-meta">
+                            <span><img src="images/user.png" alt="User Avatar"> <span>Sam
+                                    Lee</span></span>
+                            <!-- <span class="badge">Folow</span> -->
+                        </div>
+                        <div class="video-thumbnail">
+                            <img src="images/video-s-thumbnail-4.png" alt="Video Thumbnail">
+                        </div>
+                        <div class="video-meta-down">
+                            <div class="title-head">
+                                <div class="video-title">Epic Music Video</div>
+                                <span class="badge-down">03:52</span>
+                                <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            </div>
+                            <div class="title-sub-head">
+                                <small>5M views</small>
+                                <small class="sub-head-right"><small>120 .</small>120k likes</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-card">
+                        <div class="video-meta">
+                            <span><img src="images/user.png" alt="User Avatar"> <span>Sam
+                                    Lee</span></span>
+                            <!-- <span class="badge">Folow</span> -->
+                        </div>
+                        <div class="video-thumbnail">
+                            <img src="images/video-s-thumbnail-4.png" alt="Video Thumbnail">
+                        </div>
+                        <div class="video-meta-down">
+                            <div class="title-head">
+                                <div class="video-title">Epic Music Video</div>
+                                <span class="badge-down">03:52</span>
+                                <span><i class="fa-solid fa-ellipsis-vertical"></i></span>
+                            </div>
+                            <div class="title-sub-head">
+                                <small>5M views</small>
+                                <small class="sub-head-right"><small>120 .</small>120k likes</small>
+                            </div>
+                        </div>
+                    </div>
+                </div> 1
         </main>
         <aside class="suggestions">
             <div class="filter-buttons">
