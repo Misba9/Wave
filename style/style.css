@@ -732,6 +732,8 @@ h2 {
 
 .short-card .short-title {
     font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
     /* padding: 10px; */
 }
 
