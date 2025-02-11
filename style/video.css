@@ -217,8 +217,6 @@ video {
 .video-container {
     position: relative;
     width: 100%;
-    /* max-width: 600px; */
-    /* background: #000; */
     color: white;
     padding: 10px;
     border-radius: 8px;
@@ -235,7 +233,6 @@ video {
     justify-content: space-between;
     width: 100%;
     padding: 5px;
-    /* margin-bottom: 10px; */
     position: absolute;
     bottom: 50px;
     left: 50%;
@@ -276,7 +273,6 @@ video {
     justify-content: center;
     gap: 10px;
     width: 86%;
-    /* padding-top: 10px; */
 }
 
 /* Control buttons */
@@ -296,10 +292,6 @@ video {
     align-items: center;
     justify-content: center;
 }
-
-/* .controls-btn:hover {
-    background: rgba(255, 255, 255, 0.4);
-} */
 
 /* Responsive Design */
 @media (max-width: 480px) {
@@ -321,9 +313,6 @@ video {
 
 /* main video style */
 .video-container-dis {
-    /* width: 90%; */
-    /* max-width: 1200px; */
-    /* margin: auto; */
     padding: 20px;
 }
 
@@ -348,7 +337,6 @@ video {
     display: flex;
     align-items: center;
     gap: 15px;
-    /* margin-top: 10px; */
 }
 
 .button-act {
@@ -398,9 +386,6 @@ video {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* background-color: #fff;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .profile {
@@ -410,10 +395,8 @@ video {
 
 .profile img {
     width: 50px;
-    /* Adjust size as needed */
     height: 50px;
     border-radius: 50%;
-    /* Optional: Makes image circular */
     margin-right: 10px;
 }
 
