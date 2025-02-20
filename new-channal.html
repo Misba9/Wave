@@ -36,7 +36,278 @@
             });
         });
     </script>
+<style>
+ 
+</style>
+<script>
+        /* for new channel craetion script */
 
+document.addEventListener("DOMContentLoaded", function() {
+    const createBtn = document.querySelector(".create-btn");
+    const popup = document.querySelector(".container");
+    const closeBtn = document.querySelector(".right-cut");
+    const overlay = document.createElement("div"); // Create overlay dynamically
+
+    overlay.classList.add("overlay");
+    document.body.appendChild(overlay); // Append to body
+
+    // Show Popup
+    createBtn.addEventListener("click", function() {
+        popup.style.display = "block";
+        overlay.style.display = "block";
+    });
+
+    // Hide Popup
+    closeBtn.addEventListener("click", function() {
+        popup.style.display = "none";
+        overlay.style.display = "none";
+    });
+
+    // Hide when clicking outside the popup
+    overlay.addEventListener("click", function() {
+        popup.style.display = "none";
+        overlay.style.display = "none";
+    });
+});
+</script>
+<style>
+   /* for new channel craetion */
+    .container-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px; 
+    background: white;
+    padding: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    z-index: 1000;
+}
+
+.overlay {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+
+    .container-popup {
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 80%;
+        max-width: 900px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header-banner img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .profile-section {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        position: relative;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid white;
+    }
+
+    .upload-icon {
+        position: absolute;
+        bottom: 10px;
+        left: 90px;
+        background: white;
+        padding: 5px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .form-section {
+        display: flex;
+        padding: 22px;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .left-section,
+    .right-section {
+        width: 48%;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input,
+    textarea,
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-bottom: 22px;
+    }
+
+    .input-group {
+        display: flex;
+        align-items: center;
+        align-items: baseline;
+        gap: 10px;
+    }
+
+    .input-group i {
+        background: #ddd;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .visibility-options {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .submit-btn {
+        background: red;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+        width: 20%;
+    }
+
+    .submit-btn:hover {
+        background: darkred;
+    }
+
+    .visibility-options {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .visibility-options p {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        margin: 0;
+    }
+
+    .visibility-options input[type="radio"] {
+        width: 16px;
+        /* Adjust size */
+        height: 16px;
+        cursor: pointer;
+    }
+
+    .head-wrong-btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 15px;
+        border-radius: 5px;
+        height: 50px;
+    }
+
+    .right-cut {
+        cursor: pointer;
+        font-size: 22px;
+    }
+</style>
+<!-- popup -->
+<div class="container-popup">
+    <div class="head-wrong-btn">
+        <span>Create New Channel</span>
+        <div class="right-cut "><i class="fa-regular fa-circle-xmark"></i> </div>
+    </div>
+
+    <div class="header-banner">
+        <img src="images/full-banner.png" alt="Channel Banner">
+    </div>
+    <div class="profile-section">
+        <img src="images/user-02.png" alt="Profile Picture" class="profile-pic">
+        <div class="channel-title">
+            <label>Channel Title:</label>
+            <input type="text" placeholder="Enter channel title">
+        </div>
+    </div>
+    <div class="form-section">
+        <div class="left-section">
+            <label>Channel Description:</label>
+            <textarea placeholder="Enter channel description" maxlength="500"></textarea>
+            <label>Email:</label>
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" placeholder="Enter mail">
+            </div>
+            <label>Contact Number:</label>
+            <div class="input-group">
+                <i class="fas fa-phone"></i>
+                <input type="text" placeholder="Enter number">
+            </div>
+            <label>Address:</label>
+            <div class="input-group">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" placeholder="Enter address">
+            </div>
+            <label>Want to be Premium in Future:</label>
+            <select>
+                <option>Yes, I want to be premium</option>
+                <option>No, I don't</option>
+            </select>
+            <label>Visible To:</label>
+            <div class="visibility-options">
+                <p>
+                    <input type="radio" name="visibility" checked>
+                    <span>Public (Searchable and viewable by Anyone)</span>
+                </p>
+                <p>
+                    <input type="radio" name="visibility">
+                    <span>Followers (Only your followers can view)</span>
+                </p>
+                <p>
+                    <input type="radio" name="visibility">
+                    <span>Private (Hide your profile details from all)</span>
+                </p>
+            </div>
+
+        </div>
+        <div class="right-section">
+            <label>Website:</label>
+            <input type="text" placeholder="Enter link">
+            <label>Facebook:</label>
+            <input type="text" placeholder="Enter link">
+            <label>Instagram:</label>
+            <input type="text" placeholder="Enter link">
+            <label>Twitter:</label>
+            <input type="text" placeholder="Enter link">
+            <label>LinkedIn:</label>
+            <input type="text" placeholder="Enter link">
+            <label>WhatsApp:</label>
+            <input type="text" placeholder="Enter link">
+        </div>
+    </div>
+    <button type="submit" class="submit-btn">Submit</button>
+</div>
 
 <div class="navbar">
     <div class="hamburger">
