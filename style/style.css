@@ -867,7 +867,6 @@ h2 {
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    background: url('../images/movie-bg.png') center/cover no-repeat;
     border-radius: 12px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -875,11 +874,56 @@ h2 {
     text-align: center;
     transition: transform 0.3s ease;
 }
+.movie-bg{
+    background: url('../images/movie-bg.png') center/cover no-repeat;
+}
+.techinical-bg{
+    background: url('../images/techinical-bg.png') center/cover no-repeat;
+}
+.dance-bg{
+    background: url('../images/dance-bg.png') center/cover no-repeat;
+}
+.learn-bg{
+    background: url('../images/learn-bg.png') center/cover no-repeat;
+}
+.car-bg{
+    background: url('../images/car-bg.png') center/cover no-repeat;
+}
 
 .interest-card:hover {
     transform: translateY(-5px);
 }
+/* new */
+.interests-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto !important; /* Enables horizontal scrolling */
+    white-space: nowrap;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+    justify-content: flex-start;
+}
 
+.interest-card {
+    flex: 0 0 auto; /* Prevents shrinking */
+    width: 150px; /* Adjust as needed */
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #f5f5f5;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.icon-img img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Hide scrollbar for cleaner look */
+.interests-container::-webkit-scrollbar {
+    display: none;
+}
+/* new */
 /* Icon Styles */
 .interest-card .icon img {
     width: 70px;
